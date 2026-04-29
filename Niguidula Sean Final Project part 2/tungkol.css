@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    /* CRITICAL: Space for fixed navbar */
+    padding-top: 85px; 
+}
+.navbar{
+    background-color: #000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    
+    position: fixed;        /* FIXED - Always on top */
+    top: 0;
+    left: 0;
+    width: 100%;            /* Full width */
+    z-index: 9999;          /* Highest priority */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo{
+    width: 6rem;
+    margin-left: -40px;
+    /*filter: brightness(0) invert(1);*/ /* converts into white color */
+    filter: invert(48%) sepia(96%) saturate(749%) hue-rotate(1deg) brightness(102%) contrast(101%);
+}
+.logo:hover{
+    transform: scale(1.10);
+    transition: transform 0.3s ease-in-out;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.box-links{
+    text-decoration: none;
+    /*color: #fff;*/
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* transition: all 0.3s ease-in-out; */
+    border: 1px solid #ffc067;
+    margin: 0px 10px;
+}
+.box-links:hover{
+    border: 0;
+    box-shadow: 0 0 3px #ff5c00, 0 0 7px #ff5c00, 0 0 20px #d34d00;
+    transform: scale(1.05);
+    
+}
+.nav-links{
+    display: flex;
+    gap: 25px;;
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 58%;
+}
+.nav-links a{
+    color: #ffc067;
+    text-decoration: none;
+    font-size: 1.1rem;
+    /* transition: color 0.2s ease-in-out; */
+    transition: all 0.3s ease-in-out;
+}
+.nav-links a:hover{
+    color: #ff5c00;
+}
+/* MAIN CONTENT - No overlap */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px 40px;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    gap: 35px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.2),
+        0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-section {
+    flex-shrink: 0;
+}
+
+.image-section img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.description-section {
+    flex: 1;
+}
+
+.description-section h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.description-section p {
+    color: #5a6c7d;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+    background: #5a67d8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-top: 75px;
+    }
+    
+    .navbar {
+        padding: 12px 5%;
+    }
+    
+    .navlinks {
+        gap: 15px;
+    }
+    
+    .feature-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    
+    .image-section img {
+        width: 160px;
+        height: 120px;
+    }
+}
+@media (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu{
+        flex-direction: column;
+        margin-top: 10px;
+        width:100%
+    }
+    .menu a{
+        border-top: 1px solid #555;
+        padding: 10px 0;
+    }
+}
