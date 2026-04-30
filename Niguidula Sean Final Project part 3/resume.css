@@ -1,0 +1,124 @@
+/* Color Palette from Reference Image:
+   Orange: #ff9d42
+   Light Orange: #ffb870
+   Background: #000000
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #000000;
+    
+    color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container{
+    width: 100%;
+    max-width: 850px;
+    border: 1px solid #333;
+    padding: 50px;
+    background-color: #080808;
+    box-shadow: 0 0 3px #ff5c00, 0 0 7px #ff5c00, 0 0 20px #d34d00;
+}
+
+header{
+    border-bottom: 2px solid #ff9d42;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.logo{
+    color: #ff9d42;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header h1{
+    font-size: 3rem;
+    color: #ffb870;
+}
+
+.tagline{
+    color: #ff9d42;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2{
+    color: #ff9d42;
+    font-size: 1.2rem;
+    border: 1px solid #ff9d42;
+    box-shadow: 0 0 3px #ff5c00, 0 0 7px #ff5c00, 0 0 20px #d34d00;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.item{
+    margin-bottom: 20px;
+}
+
+.item h3{
+    color: #ffb870;
+    margin-bottom: 5px;
+}
+
+.item p{
+    color: #cccccc;
+    line-height: 1.3;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li{
+    background: rgba(255, 157, 66, 0.1);
+    border-left: 3px solid #ff9d42;
+    padding: 10px;
+    color: #ffffff;
+}
+
+/* Print Styling */
+@media print{
+    body{
+        background: white; color: black;
+    }
+    .resume-container{
+        border: none;
+    }
+}
+
+.btn-back{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #ffc067;
+    border-radius: 4rem;
+    font-size: 1.1rem;
+    color: #000;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    /* margin-top: 30px; */
+}
+
+.btn-back:hover{
+    box-shadow: none;
+    box-shadow: 0 0 1rem #ff9d42;
+}
